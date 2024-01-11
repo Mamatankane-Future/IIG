@@ -137,7 +137,7 @@ function interactiveImage(){
         className="shape"
         style={shapeStyle}
         ${svgData.data[element.key]?.value.id === '' ? 'id="poly_' + index + '"' : 'id="' + svgData.data[element.key]?.value.id + '"'}
-        ${svgData.data[element.key]?.value.onclick ? 'click={handleClick}' : ''}
+        ${svgData.data[element.key]?.value.onclick ? 'onClick={handleClick}' : ''}
       />
       `;
     });

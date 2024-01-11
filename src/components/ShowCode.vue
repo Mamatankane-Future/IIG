@@ -11,7 +11,7 @@ const radio = ref('HTML');
 watch(radio, (newValue) =>{
   if (newValue == 'HTML') {
     radioFunction.value = generateHtmlCode;
-    generateReactCode();
+    generateHtmlCode();
   }
   else if (newValue == 'React'){ 
     radioFunction.value = generateReactCode;
