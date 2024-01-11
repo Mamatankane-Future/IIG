@@ -1,5 +1,13 @@
 import svgData from '@/assets/svgdata';
 
+function toString(array){
+  let asString = "";
+  array.forEach(element => {
+    asString += ` ${element.x},${element.y}`;
+  });
+  return asString;
+}
+
 export const GenerateHtmlCode = (imageDimensions, rects, circles, polys, imageName) =>{
     let code = `<html>
 <head>

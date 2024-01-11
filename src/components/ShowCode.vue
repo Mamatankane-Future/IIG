@@ -24,13 +24,6 @@ watch(radio, (newValue) =>{
 })
 const radioFunction = ref(generateHtmlCode);
 
-function toString(array){
-  let asString = "";
-  array.forEach(element => {
-    asString += ` ${element.x},${element.y}`;
-  });
-  return asString;
-}
 
 
 function generateHtmlCode() {
