@@ -125,7 +125,7 @@ function interactiveImage(){
         className="shape"
         style={shapeStyle}
         ${svgData.data[element.key]?.value.id === '' ? 'id="circle_' + index + '"' : 'id="' + svgData.data[element.key]?.value.id + '"'}
-        ${svgData.data[element.key]?.value.onclick ? 'oClick={handleClick}' : ''}
+        ${svgData.data[element.key]?.value.onclick ? 'onClick={handleClick}' : ''}
       />`;
     });
 
