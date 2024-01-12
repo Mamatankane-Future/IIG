@@ -112,40 +112,34 @@ function handleClick(event) {
 
 window.addEventListener('keydown', handleKeyDown);
 
+const deepCopy = (array) => {
+  return JSON.parse(JSON.stringify(array));
+};
+
 function handleKeyDown(event) {
   if (event.key === 'v' && (event.ctrlKey || event.metaKey)) {
     if (svgData.data[getActive()].value.shape == 'rect'){
         let index = rectPoints.value.findIndex((point)=> point.key == getActive());
         let key = addNewRow("rect");
-        rectPoints.value.push({key: key, dimensions: {...rectPoints.value[index].dimensions}});
+        rectPoints.value.push({key: key, dimensions: deepCopy(rectPoints.value[index].dimensions)});
         setActive(key);
     }
     else if (svgData.data[getActive()].value.shape == 'circle'){
       let index = circlePoints.value.findIndex((point)=> point.key == getActive());
       let key = addNewRow("circle");
-      circlePoints.value.push({key: key, dimensions: {...circlePoints.value[index].dimensions}});
+      circlePoints.value.push({key: key, dimensions: deepCopy(circlePoints.value[index].dimensions)});
       setActive(key);
     }
     else if (svgData.data[getActive()].value.shape == 'poly'){
       let index = polyPoints.value.findIndex((point)=> point.key == getActive());
       let key = addNewRow("poly");
-      polyPoints.value.push({key: key, dimensions: {...polyPoints.value[index].points}});
+      polyPoints.value.push({key: key, points: deepCopy(polyPoints.value[index].points)});
       setActive(key);
+      console.log(polyPoints.value);
     }
   }   
   else if (event.key === 'Delete') {
-    if (svgData.data[getActive()].value.shape == 'rect'){
-        rectPoints.value = rectPoints.value.filter((point)=> point.key != getActive());
-        removeRow(getActive());
-    }
-    else if (svgData.data[getActive()].value.shape == 'circle'){
-      circlePoints.value = circlePoints.value.filter((point)=> point.key != getActive());
-      removeRow(getActive());
-    }
-    else if (svgData.data[getActive()].value.shape == 'poly'){
-      polyPoints.value = polyPoints.value.filter((point)=> point.key != getActive());
-      removeRow(getActive());
-    }
+    removeRow(getActive());
   }   
 }
 

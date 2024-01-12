@@ -61,6 +61,7 @@ const addNewObject = (shape) => {
     return svgData.lastStamp;
 }
 const handleDelete = (index: number) => {
+    props.handleDelete(index);
     if (tableData.value.length==1) return;
     svgData.data[index] = null;
     tableData.value = tableData.value.filter((n: number, i: number) => {
@@ -73,7 +74,6 @@ const handleDelete = (index: number) => {
         }
         else return true;
     });
-    props.handleDelete(index);
 }
 
 </script>

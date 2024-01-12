@@ -11,7 +11,7 @@ import { CFooter} from '@coreui/vue';
     </BNavbar>
     <div class="container">
       <h2>How does it work?</h2>
-      <p>Use our intuitive SVG generator for creating interactive images with ease. Start by selecting an image from your computer, then effortlessly generate interactive areas using rectangle, circle, or polygon shapes. Simply point and click on your image to define these areas. Once you've finished, click on "Show code" to reveal the generated code in either HTML, Vue, or React format.😉</p>
+      <p>Use our intuitive SVG generator for creating interactive images with ease. Start by selecting an image from your computer, then effortlessly generate interactive areas using rectangle, circle, or polygon shapes. Simply point and click on your image to define these areas. Once you've finished, click on "Show code" to reveal the generated code in either HTML, Vue, or React format. Shortcuts: 'Ctr+v' to copy and paste the selected object. 'Delete' to delete the selected object.😉</p>
     </div>
     <div class="container">
       <SelectForm />
