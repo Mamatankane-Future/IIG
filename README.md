@@ -29,4 +29,4 @@ Contributions are welcome! If you have any suggestions, bug reports, or enhancem
 If you find this tool helpful, consider giving it a star on GitHub. Your support is greatly appreciated!
 
 #### Link
-(https://interactiveimagesgenerator.netlify.app/)
+https://interactiveimagesgenerator.netlify.app/
